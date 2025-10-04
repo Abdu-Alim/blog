@@ -1,0 +1,118 @@
+/* Общий фон и шрифт */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #8fa1b1;
+}
+
+/* Хедер */
+.navbar {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.001);
+}
+
+/* Заголовки */
+h1, h2, h5 {
+    font-weight: 600;
+}
+
+/* Карточки постов */
+.list-group-item {
+    background-color: #adc6eb;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #1e3852;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: 0.2s;
+}
+
+.list-group-item:hover {
+    background: #f1f1f1;
+    transform: translateX(5px);
+}
+
+/* Пост (детальная страница) */
+article {
+    background: rgba(255, 255, 255, 0.433);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+}
+
+/* Кнопки */
+.btn {
+    border-radius: 20px;
+    padding: 8px 20px;
+    transition: all 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Подвал */
+footer {
+    background-color: #212529;
+    color: #ccc;
+    font-size: 0.9rem;
+}
+footer a {
+    color: #0d6efd;
+    text-decoration: none;
+}
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* === Стили формы создания/редактирования поста === */
+form {
+    
+    background-color: #8fabc2;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form label {
+    font-weight: 600;
+    margin-bottom: 5px;
+    display: block;
+}
+
+form input[type="text"],
+form textarea {
+    width: 100%;
+    border: 1px solid #6c757d;
+    border-radius: 10px;
+    padding: 10px 12px;
+    background-color: #f0f3f566;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+form input[type="text"]:focus,
+form textarea:focus {
+    outline: none;
+    border-color: #0d6efd;
+    box-shadow: 0 0 6px rgba(13, 110, 253, 0.6);
+    background-color: #ffffff86;
+}
+
+form textarea {
+    min-height: 180px;
+    resize: vertical;
+}
+
+button.btn {
+    border-radius: 50px;
+    padding: 8px 20px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.15);
+}
+
+button.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}

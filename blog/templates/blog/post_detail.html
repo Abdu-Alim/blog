@@ -1,0 +1,13 @@
+{% extends 'blog/base.html' %}
+{% block title %}{{ post.title }}{% endblock %}
+{% block content %}
+<article>
+    <h1>{{ post.title }}</h1>
+    <p class="text-muted">{{ post.created_at }} | {{ post.updated_at }}</p>
+    <div>{{ post.body|linebreaks }}</div>
+    <hr>
+    <a class="btn btn-primary" href="{% url 'blog:post_update' post.slug %}">Редактировать</a>
+    <a class="btn btn-danger" href="{% url 'blog:post_delete' post.slug %}">Удалить</a>
+    <a class="btn btn-secondary" href="{% url 'blog:post_list' %}">Назад</a>
+</article>
+{% endblock %}

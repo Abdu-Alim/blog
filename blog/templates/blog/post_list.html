@@ -1,0 +1,15 @@
+{% extends 'blog/base.html' %}
+{% block title %}Список постов{% endblock %}
+{% block content %}
+<h1>Посты</h1>
+<div class="list-group">
+    {% for post in posts %}
+    <a href="{{ post.get_absolute_url }}" class="list-group-item list-group-item-action">
+        <h5 class="mb-1">{{ post.title }}</h5>
+        <small class="text-muted">{{ post.created_at }}</small>
+    </a>
+    {% empty %}
+    <p>Постов пока нет.</p>
+    {% endfor %}
+</div>
+{% endblock %}

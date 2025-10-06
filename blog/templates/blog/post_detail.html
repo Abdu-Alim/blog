@@ -9,5 +9,10 @@
     <a class="btn btn-primary" href="{% url 'blog:post_update' post.slug %}">Редактировать</a>
     <a class="btn btn-danger" href="{% url 'blog:post_delete' post.slug %}">Удалить</a>
     <a class="btn btn-secondary" href="{% url 'blog:post_list' %}">Назад</a>
+    <p class="text-muted">Автор: {{ post.author }} | Категории:
+        {% for c in post.categories.all %}
+          <a href="{{ c.get_absolute_url }}" class="badge bg-secondary">{{ c.name }}</a>
+        {% empty %}—{% endfor %}
+    </p>
 </article>
 {% endblock %}
